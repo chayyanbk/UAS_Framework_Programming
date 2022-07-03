@@ -18,7 +18,7 @@ class CFirebase extends CI_Controller {
 	}
 	public function add_data()
 	{
-		$fb = Firebase::initialize('uas-framewokr-codeigniter.firebaseapp.com', 'uas-framewokr-codeigniter.web.app');
+		$fb = Firebase::initialize('uas-framewokr-codeigniter.firebaseapp.com', 'https://uas-framewokr-codeigniter-default-rtdb.europe-west1.firebasedatabase.app/');
 	    $d = [
 	        "notif" => "0",
 	        "tipe" => "0",
@@ -29,7 +29,7 @@ class CFirebase extends CI_Controller {
 	}
 	public function get_data()
 	{
-		$fb = Firebase::initialize('uas-framewokr-codeigniter.firebaseapp.com', 'uas-framewokr-codeigniter.web.app');
+		$fb = Firebase::initialize('uas-framewokr-codeigniter.firebaseapp.com', 'https://uas-framewokr-codeigniter-default-rtdb.europe-west1.firebasedatabase.app/');
 	    $a = $fb->get('/data');
 		echo json_encode($a);
 		
@@ -37,7 +37,7 @@ class CFirebase extends CI_Controller {
 	public function update_data()
 	{
 		$key = $this->input->get("key");
-		$fb = Firebase::initialize('uas-framewokr-codeigniter.firebaseapp.com', 'uas-framewokr-codeigniter.web.app');
+		$fb = Firebase::initialize('uas-framewokr-codeigniter.firebaseapp.com', 'https://uas-framewokr-codeigniter-default-rtdb.europe-west1.firebasedatabase.app/');
 		 $d = [
 	        "notif" => "1",
 	        "tipe" => "0",
@@ -49,7 +49,7 @@ class CFirebase extends CI_Controller {
 	public function delete_data()
 	{
 		$key = $this->input->get("key");
-		$fb = Firebase::initialize('YOUR_FIREBASE_URL', 'YOUR_FIREBASE_SECRET');
+		$fb = Firebase::initialize('uas-framewokr-codeigniter.firebaseapp.com', 'https://uas-framewokr-codeigniter-default-rtdb.europe-west1.firebasedatabase.app/');
 		 $d = [
 	        "notif" => "1",
 	        "tipe" => "0",
